@@ -1,0 +1,63 @@
+<div class="page">
+    <app-menu *ngIf="!compare" [routerI01]="'/educacion'" [routerI02]="'/edu_i02'" [routerI03]="'/edu_i03'"
+        [routerI04]="'/edu_i04'" [routerI05]="'/edu_i05'" [routerI06]="'/edu_i06'" [routerF01]="'/edu_f01'"
+        [routerF02]="'/edu_f02'" [routerF03]="'/edu_f03'" [routerC01]="'/edu_c01'" [routerC02]="'/edu_c02'"
+        [routerC021]="'/edu_c021'" [routerPB03]="'/edu_pb03'" [item1]="'Ciencias Agropecuarias'"
+        [item2]="'Ciencias Economicas y Administrativas'" [item3]="'Ciencias Basicas'"
+        [item4]="'Derecho y Ciencias Sociales'" [item5]="'Estudios a Distancia'" [comp1]="'app-fac-agro-f03'"
+        [comp2]="'app-fac-eco-f03'" [comp3]="'app-fac-cien-f03'" [comp4]="'app-fac-der-f03'" [comp5]="'app-fac-dis-f03'"
+        [fac_actual]="'app-fac-edu-f03'">
+    </app-menu>
+     <div class="container mt-4" >
+        
+            <div class="row"> <h1>Facultad de Educación</h1></div>
+            <div class="row"> <h3>F03. Semilleros de investigación</h3> </div>
+            <div class="container" *ngIf="!preload">
+                <div class="row" >
+                <div class="col col-lg-6 col-md-12 col-sm-12" *ngIf="!compare">
+                <app-ghap-f03
+                semilleros2014={{semilleros2014}} semilleros2015={{semilleros2015}} 
+                semilleros2016={{semilleros2016}} semilleros2017={{semilleros2017}}
+                semilleros2018={{semilleros2018}} 
+                ></app-ghap-f03>
+                </div>
+                <div class="col col-lg-6 col-md-12 col-sm-12">                
+                    <table class="table table-striped table-bordered" >
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Año</th>
+                                <th>N°Semilleros de Investigación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2014</td>
+                                <td>{{semilleros2014}}</td>
+                            </tr>
+                            <tr>
+                                <td>2015</td>
+                                <td>{{semilleros2015}}</td>
+                            </tr>
+                            <tr>
+                                <td>2016</td>
+                                <td>{{semilleros2016}}</td>
+                            </tr>
+                            <tr>
+                                <td>2017</td>
+                                <td>{{semilleros2017}}</td>
+                            </tr>
+                            <tr>
+                                <td>2018</td>
+                                <td>{{semilleros2018}}</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>{{semilleros2014+semilleros2015+semilleros2016+semilleros2017+semilleros2018}}</td>
+                            </tr>
+                        </tbody>
+                    </table>                              
+            </div>
+            </div>                
+    </div>
+</div>
+</div>

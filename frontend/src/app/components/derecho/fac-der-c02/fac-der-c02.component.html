@@ -1,0 +1,32 @@
+<div class="page">
+    <app-menu *ngIf="!compare"  [routerI01]="'/derecho'" [routerI02]="'/der_i02'" 
+        [routerI05]="'/der_i05'" [routerI06]="'/der_i06'" [routerF01]="'/der_f01'"
+        [routerF03]="'/der_f03'" [routerC01]="'/der_c01'" [routerC02]="'/der_c02'"
+        [item1]="'Ciencias Agropecuarias'" [item2]="'Ciencias Economicas y Administrativas'"
+        [item3]="'Ciencias de la educación'" [item4]="'Ciencias Básicas'" [item5]="'Estudios a Distancia'"
+        [comp1]="'app-agropecuarias'" [comp2]="'app-economicas'" [comp3]="'app-educacion'" [comp4]="'app-ciencias'" [comp5]="'app-distancia'"
+        [fac_actual]="'app-fac-der-c02'">
+    </app-menu>
+    <div class="col-md-12 mt-12">
+            <div class="container">
+                <div class="row"><h1>Facultad de Derecho y Ciencias Sociales</h1></div>
+                <div class="row"> <h3>C02. Investigadores reconocidos</h3> </div>
+                <div class="row">
+                <div class="container" *ngIf="!preload">
+                        <div *ngIf="!compare" class="row" style="width:100%;">
+                            <app-ghap-c02
+                            junior2014={{junior2014}} asociado2014={{asociado2014}} senior2014={{senior2014}}  emerito2014={{emerito2014}} 
+                            junior2015={{junior2015}} asociado2015={{asociado2015}} senior2015={{senior2015}}  emerito2015={{emerito2015}} 
+                            junior2016={{junior2016}} asociado2016={{asociado2016}} senior2016={{senior2016}}  emerito2016={{emerito2016}} 
+                            junior2017={{junior2017}} asociado2017={{asociado2017}} senior2017={{senior2017}}  emerito2017={{emerito2017}}
+                            junior2018={{junior2018}} asociado2018={{asociado2018}} senior2018={{senior2018}}  emerito2018={{emerito2018}}                                                          
+                            > 
+                        </app-ghap-c02>
+                        </div>
+                </div>
+            </div>
+            <div id="chartdiv" style="width: 100%; height: 100%;"> </div>
+        </div>
+        </div>
+</div>
+    

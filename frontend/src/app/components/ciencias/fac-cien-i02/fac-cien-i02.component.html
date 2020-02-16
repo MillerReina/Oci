@@ -1,0 +1,98 @@
+<div class="page">
+    <app-menu *ngIf="!compare"  [routerI01]="'/ciencias'" [routerI02]="'/cien_i02'" [routerI03]="'/cien_i03'"
+        [routerI04]="'/cien_i04'" [routerI05]="'/cien_i05'" [routerI06]="'/cien_i06'" [routerF01]="'/cien_f01'"
+        [routerF02]="'/cien_f02'" [routerF03]="'/cien_f03'" [routerC01]="'/cien_c01'" [routerC02]="'/cien_c02'"
+        [routerC021]="'/cien_c021'" [routerPB03]="'/cien_pb03'" [item1]="'Ciencias Agropecuarias'" [item2]="'Ciencias Economicas y Administrativas'"
+        [item3]="'Ciencias de la educación'" [item4]="'Derecho y Ciencias Sociales'" [item5]="'Estudios a Distancia'"
+        [comp1]="'app-fac-agro-i02'"
+        [comp2]="'app-economicas'" [comp3]="'app-fac-edu-i02'" [comp4]="'app-fac-der-i02'" [comp5]="'app-fac-dis-i02'"
+        [fac_actual]="'app-fac-cien-i02'">
+    </app-menu>
+    <div class="col-md-12 mt-4">
+        <div class="container">
+            <div class="row">
+                <h1>Facultad de Ciencias Básicas</h1>
+            </div>
+            <div class="row">
+                <h3>I02. Inversión en I+D a nivel de proyectos</h3>
+            </div>
+            <div class="container" *ngIf="!preload">
+                <div *ngIf="!compare" class="row" style="width:100%;">
+                    <app-ghap3 especie2014={{especie2014}} especie2015={{especie2015}} especie2016={{especie2016}}
+                        especie2017={{especie2017}} especie2018={{especie2018}} efectivo2014={{efectivo2014}}
+                        efectivo2015={{efectivo2015}} efectivo2016={{efectivo2016}} efectivo2017={{efectivo2017}}
+                        efectivo2018={{efectivo2018}} externo2014={{externo2014}} externo2015={{externo2015}}
+                        externo2016={{externo2016}} externo2017={{externo2017}} externo2018={{externo2018}}></app-ghap3>
+                </div>
+
+                <div class="row" style="width:400px; height:500px;">
+                    <div class="col mt-4" id="chart">
+                        <table class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Aporte Especie UPTC</th>
+                                    <th>Aporte Efectivo UPTC</th>
+                                    <th>Aporte Externo</th>
+                                    <th>Total Proyectos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2014</td>
+                                    <td>{{especie2014}}</td>
+                                    <td>{{efectivo2014}}</td>
+                                    <td>{{externo2014}}</td>
+                                    <td>{{especie2014+efectivo2014+externo2014}}</td>
+                                </tr>
+                                <tr>
+                                    <td>2015</td>
+                                    <td>{{especie2015}}</td>
+                                    <td>{{efectivo2015}}</td>
+                                    <td>{{externo2015}}</td>
+                                    <td>{{especie2015+efectivo2015+externo2015}}</td>
+                                </tr>
+                                <tr>
+                                    <td>2016</td>
+                                    <td>{{especie2016}}</td>
+                                    <td>{{efectivo2016}}</td>
+                                    <td>{{externo2016}}</td>
+                                    <td>{{especie2016+efectivo2016+externo2016}}</td>
+                                </tr>
+                                <tr>
+                                    <td>2017</td>
+                                    <td>{{especie2017}}</td>
+                                    <td>{{efectivo2017}}</td>
+                                    <td>{{externo2017}}</td>
+                                    <td>{{especie2017+efectivo2017+externo2017}}</td>
+                                </tr>
+                                <tr>
+                                    <td>2018</td>
+                                    <td>{{especie2018}}</td>
+                                    <td>{{efectivo2018}}</td>
+                                    <td>{{externo2018}}</td>
+                                    <td>{{especie2018+efectivo2018+externo2018}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>{{especie2014+especie2015+especie2016+especie2017+especie2018}}</td>
+                                    <td>{{efectivo2014+efectivo2015+efectivo2016+efectivo2017+efectivo2018}}</td>
+                                    <td>{{externo2014+externo2015+externo2016+externo2017+externo2018}}</td>
+                                    <td>{{especie2014+especie2015+especie2016+especie2017+especie2018+efectivo2014+efectivo2015+efectivo2016+efectivo2017+efectivo2018+externo2014+externo2015+externo2016+externo2017+externo2018}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div *ngIf="compare" class="row" >
+                    <app-ghap3 style="width:500px;" especie2014={{especie2014}} especie2015={{especie2015}} especie2016={{especie2016}}
+                        especie2017={{especie2017}} especie2018={{especie2018}} efectivo2014={{efectivo2014}}
+                        efectivo2015={{efectivo2015}} efectivo2016={{efectivo2016}} efectivo2017={{efectivo2017}}
+                        efectivo2018={{efectivo2018}} externo2014={{externo2014}} externo2015={{externo2015}}
+                        externo2016={{externo2016}} externo2017={{externo2017}} externo2018={{externo2018}}></app-ghap3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
