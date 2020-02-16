@@ -9,7 +9,7 @@ app.set('port', process.env.PORT || 3000);
 
 //MiddleWares
 app.use(cors({origin: 'http://localhost:4200'}));
-app.use(morgan('dev'));
+app.use(morgan('start'));
 app.use(express.json());
 
 //Routes Fac Distancia
